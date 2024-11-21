@@ -55,7 +55,7 @@ def load_data(feature_choice):
 
 # Learning curve functions
 def plot_learning_curve_with_test(model, X_train, X_test, y_train, y_test, title="Learning Curve"):
-    train_sizes = np.logspace(0.1, 1.0, 10)
+    train_sizes = np.logspace(np.log10(0.1), np.log10(1.0), 10)
     train_errors = []
     test_errors = []
 
@@ -90,7 +90,7 @@ def plot_learning_curve_with_test(model, X_train, X_test, y_train, y_test, title
 
 def plot_learning_curve_kfold(model, X, y, n_splits=5, title="Learning Curve with K-Fold CV"):
     kf = KFold(n_splits=n_splits, shuffle=True, random_state=42)
-    train_sizes = np.logspace(0.1, 1.0, 10)
+    train_sizes = np.logspace(np.log10(0.1), np.log10(1.0), 10)
 
     all_train_errors = []
     all_test_errors = []
@@ -159,7 +159,7 @@ def plot_learning_curve_kfold(model, X, y, n_splits=5, title="Learning Curve wit
 
 
 
-feature_choice = "4-body"  # Options: "2-body", "3-body", "4-body", "2+3-body", "2+3+4-body"
+feature_choice = "2-body"  # Options: "2-body", "3-body", "4-body", "2+3-body", "2+3+4-body"
 X_train, X_test, y_train, y_test = load_data(feature_choice)
 
 plot_learning_curve_kfold(LinearRegression(), X_train, y_train, title=f"Learning Curve ({feature_choice})")
