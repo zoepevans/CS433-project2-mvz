@@ -2,8 +2,6 @@ import numpy as np
 import os
 
 
-
-
 def load_data_standardized(feature_choice):
     """
     Dynamically load data based on the feature choice.

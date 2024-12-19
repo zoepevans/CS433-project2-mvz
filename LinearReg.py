@@ -2,9 +2,13 @@ import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.model_selection import KFold
 
-def plot_learning_curve_kfold(model, X, y, n_splits=5, title="Learning Curve with K-Fold CV"):
+def plot_learning_curve_kfold(model, X, y, n_splits=5, title="Learning Curve with K-Fold CV", feature_choice="2-body",train_sizes = np.logspace(np.log10(0.01), np.log10(0.1), 3)):
+    """
+    Plot and save the learning curve for a given model using K-Fold Cross Validation.
+    """
+
     kf = KFold(n_splits=n_splits, shuffle=True, random_state=42)
-    train_sizes = np.logspace(np.log10(0.01), np.log10(1.0), 10)
+
     all_train_errors = []
     all_test_errors = []
     subset_sizes = []
@@ -71,6 +75,6 @@ def plot_learning_curve_kfold(model, X, y, n_splits=5, title="Learning Curve wit
     plt.legend(loc="best")
     plt.show()
 
-    np.save("train_errors3b_LinReg.npy", all_train_errors)
-    np.save("test_errors3b_LinReg.npy", all_test_errors)
-    np.save("subset_sizes3b_LinReg.npy", subset_sizes)
+    np.save(f"train_errors_{feature_choice}_LinReg.npy", all_train_errors)
+    np.save(f"test_errors_{feature_choice}_LinReg.npy", all_test_errors)
+    np.save(f"subset_sizes_{feature_choice}_LinReg.npy", subset_sizes)
