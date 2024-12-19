@@ -31,21 +31,21 @@ python run_XXX.py
 
 1. run_LinReg.py
 
-This script performs linear regression on the dataset. It reads the data, preprocesses it, and fits a linear regression model. The script outputs the root mean squared error of the predictions divided by the std of the training target. You can choose one of the input data path and modify other parameters directly in the script.
+This script performs linear regression on the dataset. It reads the data, preprocesses it, and fits a linear regression model. The script outputs the root mean squared error of the predictions divided by the std of the training target. You can chose which body order you want to analyse and modify other parameters directly in the script.
 
 2. run_Sampling.py
 
-This script performs sampling of the dataset using CUR decomposition. It reads the data, applies the sampling method, and outputs the data with sampled features.  You can choose one of the input data path and modify other parameters directly in the script. If you uncomment the last part you can also sample on the data instead of just the features.
+This script performs sampling of the dataset using CUR decomposition. It reads the data, applies the sampling method, and outputs the data with sampled features. You can chose which body order you want to analyse and modify other parameters directly in the script. If you uncomment the last part you can also sample on the data instead of just the features.
 
 3. run_Kernel.py
 
-This script performs kernel ridge regression on the dataset. It reads the data, preprocesses it, and fits a kernel ridge regression model. The script outputs the root mean squared error of the predictions divided by the std of the training target.  You can choose one of the input data path and modify other parameters directly in the script.
+This script performs kernel ridge regression on the dataset. It reads the data, preprocesses it, and fits a kernel ridge regression model. The script outputs the root mean squared error of the predictions divided by the std of the training target. You can chose which body order you want to analyse and modify other parameters directly in the script.
 
 4. run_ridge.py
 
-This script performs ridge regression on the dataset. It reads the data, preprocesses it, and fits a ridge regression model. The script outputs the root mean squared error of the predictions divided by the std of the training target.  You can choose one of the input data path and modify other parameters directly in the script.
+This script performs ridge regression on the dataset. It reads the data, preprocesses it, and fits a ridge regression model. The script outputs the root mean squared error of the predictions divided by the std of the training target. You can chose which body order you want to analyse and modify other parameters directly in the script.
 
 5. run_NN.py
 
-This script performs neural network regression on the dataset. It reads the data, preprocesses it, and fits a neural network model. The script outputs the root mean squared error of the predictions divided by the std of the training target.  You can choose one of the input data path and modify other parameters directly in the script.
+This script performs neural network regression on the dataset. It reads the data, preprocesses it, and fits a neural network model. The script outputs the root mean squared error of the predictions divided by the std of the training target. You can chose which body order you want to analyse and modify other parameters directly in the script.
 
