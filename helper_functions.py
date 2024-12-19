@@ -16,10 +16,10 @@ def load_data_standardized(feature_choice):
     current_dir = os.getcwd()
 
     data_paths = {
-    "energies": os.path.join(current_dir, "data", "energies.npy"),
-    "2-body": os.path.join(current_dir, "data", "features_2b.npy"),
-    "3-body": os.path.join(current_dir, "data", "features_3b.npy"),
-    "4-body": os.path.join(current_dir, "data", "features_4b.npy"), 
+    "energies": os.path.join(current_dir, "../data", "energies.npy"),
+    "2-body": os.path.join(current_dir, "../data", "features_2b.npy"),
+    "3-body": os.path.join(current_dir, "../data", "features_3b.npy"),
+    "4-body": os.path.join(current_dir, "../data", "features_4b.npy"), 
 }
     energies = np.load(data_paths["energies"])
 
