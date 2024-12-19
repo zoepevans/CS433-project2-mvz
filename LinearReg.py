@@ -26,8 +26,8 @@ def plot_learning_curve_kfold(model, X, y, n_splits=5, title="Learning Curve wit
 
             model.fit(X_train_subset, y_train_subset)
 
-            train_rmse = np.sqrt(np.mean((model.predict(X_train_subset) - y_train_subset) ** 2))
-            test_rmse = np.sqrt(np.mean((model.predict(X_test) - y_test) ** 2))
+            train_rmse = np.sqrt(np.mean((model.predict(X_train_subset) - y_train_subset) ** 2))/np.std(y_train)
+            test_rmse = np.sqrt(np.mean((model.predict(X_test) - y_test) ** 2))/np.std(y_test)
 
             train_errors.append(train_rmse)
             test_errors.append(test_rmse)
